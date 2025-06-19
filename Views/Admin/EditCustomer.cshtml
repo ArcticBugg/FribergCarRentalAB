@@ -1,0 +1,36 @@
+﻿@model FribergCarRentalAB.Models.Customer
+
+<h2>Redigera kund</h2>
+
+<div class="admin-form">
+    <form asp-action="EditCustomer" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div>
+            <label for="Name">Namn</label>
+            <input asp-for="Name" class="form-control" id="Name" />
+        </div>
+
+        <div>
+            <label for="Address">Adress</label>
+            <input asp-for="Address" class="form-control" id="Address" />
+        </div>
+
+        <div>
+            <label for="PhoneNumber">Adress</label>
+            <input asp-for="PhoneNumber" class="form-control" id="PhoneNumber" />
+        </div>
+
+        <div>
+            <label for="Email">Mejl</label>
+            <input asp-for="Email" class="form-control" id="Email" />
+        </div>
+
+        <div>
+            <label for="Password">Lösenord</label>
+            <input asp-for="Password" class="form-control" type="text" id="Password" />
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2">Spara</button>
+    </form>
+</div>

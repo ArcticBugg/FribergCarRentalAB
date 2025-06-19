@@ -1,0 +1,23 @@
+﻿@model FribergCarRentalAB.Models.Car
+
+<h2>@Model.Brand @Model.Model</h2>
+<p>@Model.Description</p>
+<p>Pris per dag: <strong>@Model.PricePerDay kr</strong></p>
+
+@if (Model.ImageUrls != null && Model.ImageUrls.Any())
+{
+    foreach (var url in Model.ImageUrls)
+    {
+        <img src="@url" width="300" style="margin:10px;" />
+    }
+}
+
+<h3>Boka denna bil</h3>
+<form method="post" asp-action="Book">
+    <input type="hidden" name="carId" value="@Model.Id" />
+    <label>Startdatum:</label>
+    <input type="date" name="startDate" required />
+    <label>Slutdatum:</label>
+    <input type="date" name="endDate" required />
+    <button type="submit">Boka</button>
+</form>

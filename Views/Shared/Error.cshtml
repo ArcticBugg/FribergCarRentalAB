@@ -1,0 +1,30 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Ett fel har inträffat";
+}
+
+<h1 class="text-danger">Ett fel har inträffat.</h1>
+<h2 class="text-danger">Något gick fel vid behandlingen av din förfrågan.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Fel-ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>Felsökning i utvecklingsläge</h3>
+<p>
+    Om du vill se mer detaljerad information om felet kan du aktivera <strong>utvecklingsläge</strong>.
+</p>
+<p>
+    <strong>Observera:</strong> Utvecklingsläge bör inte användas i publicerade versioner av webbplatsen,
+    eftersom det kan visa känslig information för användare.
+</p>
+<p>
+    För att aktivera utvecklingsläge, sätt miljövariabeln <strong>ASPNETCORE_ENVIRONMENT</strong> till <strong>Development</strong> och starta om applikationen.
+</p>
+
+<p>
+    <a href="/" class="btn btn-primary mt-3">Till startsidan</a>
+</p>

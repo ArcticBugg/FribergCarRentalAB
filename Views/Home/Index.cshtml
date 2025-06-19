@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Välkommen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Välkommen till Friberg Car Rentals</h1>
+    <p class="lead">Din exklusiva biluthyrning.</p>
+
+    <img src="~/images/Friberg.png" alt="Friberg" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;" />
+
+    <p>
+        <br />
+        Här kan du:
+    </p>
+    <ul class="list-unstyled">
+        <li>Bläddra bland Marcus Fribergs imponerande bilsamling</li>
+        <li>Boka en bil för valfri period</li>
+        <li>Se och hantera dina bokningar</li>
+
+        <li>Redan kund? Logga in och hantera dina bokningar.</li>
+        <li>Ny här? Skapa ett konto och sedan är det bara gasa!</li>
+    </ul>
+
+    <p>
+        <br />
+
+        Du som administratör kan:
+    </p>
+    <ul class="list-unstyled">
+        <li>Hantera bilar, kunder och bokningar</li>
+        <li>Logga in på <a asp-controller="Admin" asp-action="Index">/admin/</a></li>
+    </ul>
+
+    <a class="btn btn-primary mt-3" asp-controller="Car" asp-action="Index">Utforska bilarna</a>
+</div>

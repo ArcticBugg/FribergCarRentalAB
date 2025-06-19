@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Adminpanel";
+}
+
+<h2>Adminpanel</h2>
+<p>Du är inne i adminläget.</p>
+
+<ul>
+    <li><a asp-controller="Admin" asp-action="Cars">Hantera bilar</a></li>
+    <li><a asp-controller="Admin" asp-action="Customers">Hantera kunder</a></li>
+    <li><a asp-controller="Admin" asp-action="Bookings">Hantera bokningar</a></li>
+</ul>
+
+<a asp-controller="Home" asp-action="Index">Till startsidan</a>

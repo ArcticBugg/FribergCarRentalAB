@@ -1,0 +1,154 @@
+﻿/* Har haft en del problem färger i formulären och kombinera med bootstrap så kanske det finns en del som är tillkrånglat där. Gjorde det för krångligt i början och nu sitter jag med det hehe.*/
+
+
+/*Huvudfärger*/
+:root {
+    --main-color: #f96d00; /* Orange accentfärg */
+    --bg-color: #1b1f24; /* Mörk bakgrund */
+    --surface-color: #2e3440; /* Ljusare yta */
+    --text-color: #ffffff; /* Vit text */
+}
+
+/* Grundinställningar */
+* {
+    box-sizing: border-box;
+    color: var(--text-color) !important;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Rubrik */
+header, footer {
+    background-color: var(--bg-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+    header h1, footer {
+        color: var(--main-color);
+        margin: 0;
+    }
+
+/* Navigering */
+nav {
+    background-color: var(--surface-color);
+    text-align: center;
+    padding: 10px 0;
+}
+
+    nav a {
+        font-weight: bold;
+    }
+
+/* Sektioner */
+section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Knappar */
+button, .btn, .btn-primary, .btn-danger, .btn-sm {
+    background-color: var(--main-color);
+    color: var(--text-color) !important;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Tabeller */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: var(--surface-color);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--main-color);
+}
+
+
+
+
+
+
+/* Färgkoder för när kunden ser sina bokningar */
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    background-color: #2e3440;
+    color: #ffffff;
+}
+
+    .booking-table th,
+    .booking-table td {
+        padding: 12px;
+        border-bottom: 1px solid #f96d00;
+        color: #ffffff;
+        background-color: #2e3440;
+    }
+
+    .booking-table tr:hover {
+        background-color: #2e3440 !important; /* För att tvinga bort Bootstrap hover */
+        color: #ffffff !important;
+    }
+
+    /*Färger för adminvyn*/
+
+    .booking-table,
+    .booking-table th,
+    .booking-table td {
+        background-color: var(--surface-color);
+        color: var(--text-color);
+        border: 1px solid var(--main-color);
+    }
+
+        .booking-table tr:hover {
+            background-color: var(--surface-color);
+            color: var(--text-color);
+        }
+
+
+.admin-form input.form-control,
+.admin-form textarea.form-control,
+.admin-form select.form-control {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid var(--main-color);
+    font-size: 1rem;
+}
+
+.admin-form label {
+    color: var(--text-color);
+}
+
+
+/* Se till att inputfält och textarea har mörk bakgrund och vit text */
+input.form-control,
+textarea.form-control {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--main-color);
+}
+
+    input.form-control::placeholder,
+    textarea.form-control::placeholder {
+        color: #ccc;
+    }
+

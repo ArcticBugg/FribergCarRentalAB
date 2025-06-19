@@ -1,0 +1,29 @@
+﻿@model List<FribergCarRentalAB.Models.Car>
+
+<h2>Alla bilar</h2>
+<a class="btn btn-primary" asp-action="CreateCar">Lägg till ny bil</a>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Märke</th>
+            <th>Modell</th>
+            <th>Pris per dag</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model)
+        {
+            <tr>
+                <td>@car.Brand</td>
+                <td>@car.Model</td>
+                <td>@car.PricePerDay kr</td>
+                <td>
+                    <a asp-action="EditCar" asp-route-id="@car.Id">Redigera</a> |
+                    <a asp-action="DeleteCar" asp-route-id="@car.Id">Ta bort</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

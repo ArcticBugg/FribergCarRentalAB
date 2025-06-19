@@ -1,0 +1,21 @@
+﻿@model List<FribergCarRentalAB.Models.Customer>
+
+<h2>Kunder</h2>
+<table class="table">
+    <thead>
+        <tr><th>Namn</th><th>E-post</th><th></th></tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Name</td>
+                <td>@customer.Email</td>
+                <td>
+                    <a asp-action="EditCustomer" asp-route-id="@customer.Id">Redigera</a> |
+                    <a asp-action="DeleteCustomer" asp-route-id="@customer.Id">Ta bort</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

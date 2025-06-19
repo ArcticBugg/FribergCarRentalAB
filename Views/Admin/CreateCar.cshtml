@@ -1,0 +1,35 @@
+﻿@model FribergCarRentalAB.Models.Car
+
+<h2>Lägg till bil</h2>
+
+<form asp-action="CreateCar" method="post" class="admin-form">
+
+    <div>
+        <label>Märke</label>
+        <input asp-for="Brand" class="form-control" />
+    </div>
+    <div>
+        <label>Modell</label>
+        <input asp-for="Model" class="form-control" />
+    </div>
+
+    <div>
+        <label for="RegistrationNumber">Registreringsnummer</label>
+        <input asp-for="RegistrationNumber" class="form-control" id="RegistrationNumber" />
+    </div>
+
+
+    <div>
+        <label>Pris per dag</label>
+        <input asp-for="PricePerDay" class="form-control" />
+    </div>
+    <div>
+        <label>Beskrivning</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div>
+        <label>Bild-URL (kommatecken mellan flera)</label>
+        <input name="ImageUrls" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success mt-2">Spara</button>
+</form>

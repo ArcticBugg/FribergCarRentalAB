@@ -1,0 +1,27 @@
+﻿<h2>Kundinloggning</h2>
+<ul class="list-unstyled">
+    <li>Har du redan ett konto? Logga in här!</li>
+
+</ul>
+<form method="post" asp-action="Login">
+    <input name="email" placeholder="E-post" />
+    <input name="password" placeholder="Lösenord" type="password" />
+    <button type="submit">Logga in</button>
+</form>
+
+<h2>Registrering</h2>
+<ul class="list-unstyled">
+    <li>Här kan du skapa ett konto för att sedan kunna boka och hantera eventuella bokningar.</li>
+    
+</ul>
+
+<form method="post" asp-action="Register">
+    <input name="Name" placeholder="Namn" required />
+    <input name="Email" placeholder="E-post" type="email" required />
+    <input name="Password" placeholder="Lösenord" type="password" required />
+    <input name="Address" placeholder="Adress" required />
+    <input name="PhoneNumber" placeholder="Telefonnummer" required />
+    <button type="submit">Registrera</button>
+</form>
+
+<p style="color:red;">@ViewBag.Error</p>

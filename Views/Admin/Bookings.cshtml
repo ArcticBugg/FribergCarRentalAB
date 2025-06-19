@@ -1,0 +1,42 @@
+﻿@model List<FribergCarRentalAB.Models.Booking>
+
+<h2>Bokningar</h2>
+
+<table class="booking-table">
+
+    <thead>
+        <tr>
+            <th>Bil</th>
+            <th>Kund</th>
+            <th>Start</th>
+            <th>Slut</th>
+            <th>Status</th>
+            <th>Åtgärder</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model)
+        {
+            <tr>
+                <td>@booking.Car.Brand @booking.Car.Model</td>
+                <td>@booking.Customer.Name</td>
+                <td>@booking.StartDate.ToShortDateString()</td>
+                <td>@booking.EndDate.ToShortDateString()</td>
+                <td>
+                    @(booking.Confirmed ? "Bekräftad" : "Väntar på bekräftelse")
+                </td>
+                <td>
+                    @if (!booking.Confirmed)
+                    {
+                        <form asp-action="ConfirmBooking" asp-route-id="@booking.Id" method="post" style="display:inline;">
+                            <button class="btn btn-success btn-sm">Godkänn</button>
+                        </form>
+                    }
+                    <a asp-action="DeleteBooking" asp-route-id="@booking.Id" class="btn btn-danger btn-sm">Ta bort</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
